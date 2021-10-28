@@ -1,0 +1,19 @@
+@media (min-width: 1024px) {
+  .top-navbar {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+
+.brand-name,
+.login {
+  text-decoration: none !important;
+}
+
+.active {
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+}
