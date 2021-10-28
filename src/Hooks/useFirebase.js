@@ -20,14 +20,13 @@ const useFirebase = () => {
   const [isLoading, setIsloading] = useState(true);
   // sign in with google provider
 
-  const signInGoogle = (from, history) => {
+  const signInGoogle = () => {
     setIsloading(true);
     const provier = new GoogleAuthProvider();
     signInWithPopup(auth, provier)
       .then((result) => {
         const userInfo = result.user;
         setUser(userInfo);
-        console.log(user);
         setIsloading(false);
         history.push(from);
       })
@@ -42,6 +41,7 @@ const useFirebase = () => {
   // manually new user creating
 
   const manuallySignUp = (email, password, name) => {
+    console.log(email, password, name);
     setIsloading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
@@ -66,7 +66,7 @@ const useFirebase = () => {
   };
 
   // user manually sign in-
-  const manuallySignIn = (email, password, from, history) => {
+  const manuallySignIn = (email, password) => {
     setIsloading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {

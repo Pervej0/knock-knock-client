@@ -13,7 +13,38 @@
 
 .active {
   font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: white;
-  text-decoration-thickness: 2px;
+  color: rgb(105, 33, 33);
+}
+
+header nav .user-profile {
+  position: relative;
+  right: 0px;
+  top: 0px;
+}
+
+#show {
+  display: block;
+}
+
+#hide {
+  display: none;
+}
+
+header nav .user-profile .dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  width: 200px;
+  background-color: #ffffff;
+  padding: 10px 7px;
+}
+
+header nav .user-profile .dropdown li {
+  line-height: 30px;
+}
+
+@media (max-width: 1024px) {
+  header nav .user-profile .dropdown {
+    left: 0px;
+  }
 }

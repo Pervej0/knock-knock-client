@@ -78,7 +78,7 @@ const Login = () => {
           </div>
           <div className="text-center">
             <button
-              onClick={() => signInGoogle(from, history)}
+              onClick={() => signInGoogle()}
               className="px-4 py-2 border flex items-center justify-center mx-auto my-6"
             >
               <FontAwesomeIcon icon={faGoogle} size="2x" />
