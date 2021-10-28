@@ -8,6 +8,7 @@ import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import NotFound from "./Components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider";
+import Footer from "./Components/Shared/Footer/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           {/* <Route exact path="/" component={Home} /> */}
           <Route path="*" component={NotFound} />
         </Switch>
+        <Footer />
       </Router>
     </AuthProvider>
   );

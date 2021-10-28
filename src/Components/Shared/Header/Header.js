@@ -27,8 +27,8 @@ const Header = () => {
           to="/"
           className="p-2 mr-4 inline-flex items-center brand-name"
         >
-          <span className="text-xl text-white font-serif italic font-semibold tracking-wide">
-            &nbsp;Knock Knock
+          <span className="text-2xl text-white italic font-bold tracking-wide">
+            &nbsp;Knock <span className="text-gray-800">Knock</span>
           </span>
         </NavLink>
 
