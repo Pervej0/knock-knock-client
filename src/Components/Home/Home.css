@@ -17,3 +17,14 @@
 .my-btn:hover::after {
   width: 100%;
 }
+
+.category-box {
+  transition: 0.4s all ease;
+  border: 1px solid rgba(0, 0, 0, 0.54);
+}
+
+.category-box:hover {
+  box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.54);
+  -webkit-box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.54);
+}

@@ -9,7 +9,7 @@ const Product = ({ product }) => {
       <div>
         <img src={img} alt="" />
       </div>
-      <div className="p-2 py-3 border border-yellow-800">
+      <div className="p-2 py-3 border border-t-0 hover:border-yellow-500">
         <h3 className="text-xl font-semibold hover:text-yellow-600">{title}</h3>
         <small>
           Category: <span className="text-gray-500 capitalize">{category}</span>
