@@ -1,0 +1,19 @@
+.my-btn {
+  position: relative;
+  z-index: 0;
+}
+
+.my-btn::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: 0.4s all ease;
+  width: 0px;
+  background-color: rgba(20, 20, 20, 0.463);
+}
+
+.my-btn:hover::after {
+  width: 100%;
+}
