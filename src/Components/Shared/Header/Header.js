@@ -27,7 +27,7 @@ const Header = () => {
           to="/"
           className="p-2 mr-4 inline-flex items-center brand-name"
         >
-          <span className="text-2xl text-white italic font-bold tracking-wide">
+          <span className="text-3xl text-white italic font-bold tracking-wide">
             &nbsp;Knock <span className="text-gray-800">Knock</span>
           </span>
         </NavLink>
@@ -85,19 +85,25 @@ const Header = () => {
                     {user.displayName}
                   </li>
                   <li>
-                    <Link to="/" className="text-gray-800 font-semibold px-2">
+                    <Link
+                      to="/contact"
+                      className="text-gray-800 font-semibold px-2"
+                    >
                       My Orders
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="text-gray-800 font-semibold px-2">
+                    <Link
+                      to="/about"
+                      className="text-gray-800 font-semibold px-2"
+                    >
                       Manage Orders
                     </Link>
                   </li>
                   <li>
                     <Link
                       className="text-gray-800 font-semibold px-2"
-                      to="/"
+                      to="/login"
                       onClick={logOut}
                     >
                       Log out
