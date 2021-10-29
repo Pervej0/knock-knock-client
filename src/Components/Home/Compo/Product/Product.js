@@ -1,9 +1,12 @@
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
+import useAuth from "../../../../Hooks/useAuth";
 
 const Product = ({ product }) => {
-  const { title, img, price, category } = product;
+  const { title, img, price, category, _id, desc } = product;
+
   return (
     <div>
       <div>
@@ -18,10 +21,14 @@ const Product = ({ product }) => {
           <span className="text-2xl">$</span>
           {price}
         </h4>
-        <button className="my-btn px-4 py-2 bg-yellow-400 font-semibold rounded">
+        <p className="text-sm">{desc}</p>
+        <Link
+          to={`/products/${_id}`}
+          className="my-btn inline-block mt-3 px-4 py-2 bg-yellow-400 font-semibold rounded"
+        >
           <FontAwesomeIcon icon={faCartArrowDown} />
           &nbsp; Order Now
-        </button>
+        </Link>
       </div>
     </div>
   );

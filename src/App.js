@@ -9,6 +9,7 @@ import Login from "./Components/Login/Login";
 import NotFound from "./Components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider";
 import Footer from "./Components/Shared/Footer/Footer";
+import OrderPlace from "./Components/Home/Compo/Product/Compo/OrderPlace";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/products/:id" component={OrderPlace} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           {/* <Route exact path="/" component={Home} /> */}
