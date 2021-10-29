@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
+import Spinner from "../../Shared/LoadingSpin/Spinner";
 import Product from "./Product/Product";
 
 const Services = () => {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
@@ -18,11 +23,15 @@ const Services = () => {
           Popular Choices
         </h1>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5">
-        {products.map((item) => (
-          <Product product={item} key={item._id} />
-        ))}
-      </div>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5">
+          {products.map((item) => (
+            <Product product={item} key={item._id} />
+          ))}
+        </div>
+      )}
     </section>
   );
 };

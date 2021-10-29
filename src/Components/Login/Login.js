@@ -2,15 +2,20 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import useFirebase from "../../Hooks/useFirebase";
+import useAuth from "../../Hooks/useAuth";
+import { useHistory, useLocation } from "react-router";
 
 const Login = () => {
-  const { manuallySignIn, signInGoogle, signInFacebook } = useFirebase();
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
   });
   const [userError, setUserError] = useState("");
+  const history = useHistory();
+  const location = useLocation();
+  const { manuallySignIn, signInGoogle } = useAuth();
+
+  let { from } = location.state || { from: { pathname: "/" } };
 
   const handleUserInput = (e) => {
     const { name, value } = e.target;
@@ -78,7 +83,7 @@ const Login = () => {
           </div>
           <div className="text-center">
             <button
-              onClick={() => signInGoogle()}
+              onClick={() => signInGoogle(from, history)}
               className="px-4 py-2 border flex items-center justify-center mx-auto my-6"
             >
               <FontAwesomeIcon icon={faGoogle} size="2x" />

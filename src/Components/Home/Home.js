@@ -8,13 +8,13 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Category />
       <Services />
       <Features />
       <Subscription />
-    </div>
+    </>
   );
 };
 

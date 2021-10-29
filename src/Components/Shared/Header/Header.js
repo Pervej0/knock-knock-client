@@ -86,7 +86,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to="/contact"
+                      to="/myOrders"
                       className="text-gray-800 font-semibold px-2"
                     >
                       My Orders
@@ -94,7 +94,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      to="/about"
+                      to="/manageOrders"
                       className="text-gray-800 font-semibold px-2"
                     >
                       Manage Orders

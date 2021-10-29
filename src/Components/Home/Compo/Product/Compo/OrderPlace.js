@@ -19,6 +19,7 @@ const OrderPlace = ({ title }) => {
 
   const onSubmit = (data) => {
     data.title = product.title;
+    data.status = "pending";
     data.img = product.img;
 
     if (!isSubmitted) {
@@ -30,7 +31,7 @@ const OrderPlace = ({ title }) => {
         .then((res) => res.json())
         .then((data) => {
           if (data.acknowledged) {
-            alert("Successfully registered.");
+            alert("Successfully ordered.");
             setIsSubmitted(true);
           }
         });

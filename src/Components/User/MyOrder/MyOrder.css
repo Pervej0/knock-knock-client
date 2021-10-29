@@ -1,0 +1,16 @@
+.order-card {
+  display: none;
+}
+
+.order-table {
+  display: block;
+}
+
+@media (max-width: 669px) {
+  .order-card {
+    display: block;
+  }
+  .order-table {
+    display: none;
+  }
+}

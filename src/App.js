@@ -10,6 +10,9 @@ import NotFound from "./Components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider";
 import Footer from "./Components/Shared/Footer/Footer";
 import OrderPlace from "./Components/Home/Compo/Product/Compo/OrderPlace";
+import MyOrder from "./Components/User/MyOrder/MyOrder";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import ManageOrders from "./Components/User/ManageOrders/ManageOrders";
 
 function App() {
   return (
@@ -21,7 +24,15 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
-          <Route path="/products/:id" component={OrderPlace} />
+          <PrivateRoute path="/products/:id">
+            <OrderPlace />
+          </PrivateRoute>
+          <PrivateRoute path="/myOrders">
+            <MyOrder />
+          </PrivateRoute>
+          <PrivateRoute path="/manageOrders">
+            <ManageOrders />
+          </PrivateRoute>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           {/* <Route exact path="/" component={Home} /> */}
