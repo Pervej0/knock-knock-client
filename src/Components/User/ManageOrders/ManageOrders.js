@@ -10,7 +10,7 @@ const ManageOrders = () => {
   const [isApproved, setIsApproved] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders`)
+    fetch(`https://fierce-tor-50016.herokuapp.com/myOrders`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -21,7 +21,7 @@ const ManageOrders = () => {
   // handle status update click
   const statusHandle = (id) => {
     if (!isApproved) {
-      fetch(`http://localhost:5000/myOrders/${id}`, {
+      fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${id}`, {
         method: "PUT",
       })
         .then((res) => res.json())
@@ -41,7 +41,7 @@ const ManageOrders = () => {
   const handleRemove = (id) => {
     let warning = window.confirm("Are sure wanna delete this product?");
     if (warning) {
-      fetch(`http://localhost:5000/myOrders/${id}`, {
+      fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -54,7 +54,6 @@ const ManageOrders = () => {
     } else {
       return;
     }
-    console.log(id);
   };
 
   return (
