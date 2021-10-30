@@ -102,6 +102,14 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
+                      to="/addProduct"
+                      className="text-gray-800 font-semibold px-2"
+                    >
+                      Add Product
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
                       className="text-gray-800 font-semibold px-2"
                       to="/login"
                       onClick={logOut}

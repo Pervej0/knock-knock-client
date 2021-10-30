@@ -36,7 +36,7 @@ const OrderPlace = ({ title }) => {
           }
         });
     } else {
-      alert("Already submitted.");
+      alert("Already ordered.");
     }
   };
   return (

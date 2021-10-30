@@ -13,6 +13,7 @@ import OrderPlace from "./Components/Home/Compo/Product/Compo/OrderPlace";
 import MyOrder from "./Components/User/MyOrder/MyOrder";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import ManageOrders from "./Components/User/ManageOrders/ManageOrders";
+import AddProduct from "./Components/User/AddProduct/AddProduct";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <PrivateRoute path="/manageOrders">
             <ManageOrders />
           </PrivateRoute>
+          <Route path="/addProduct" component={AddProduct} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           {/* <Route exact path="/" component={Home} /> */}
