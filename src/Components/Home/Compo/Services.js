@@ -7,7 +7,7 @@ const Services = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://fierce-tor-50016.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
