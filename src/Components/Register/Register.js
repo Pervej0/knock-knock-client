@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import useFirebase from "../../Hooks/useFirebase";
+import { useHistory } from "react-router";
 
 const Register = () => {
   const { signInGoogle, manuallySignUp } = useAuth();
@@ -14,6 +14,7 @@ const Register = () => {
     password: "",
     confirmPassword: "",
   });
+  const history = useHistory();
 
   const handleUserInput = (e) => {
     const { name, value } = e.target;
@@ -28,8 +29,6 @@ const Register = () => {
   };
 
   const registerSubmit = () => {
-    // console.log(userInfo);
-
     if (userInfo.name === "") {
       setUserError("Please enter your name!");
       return;
@@ -50,7 +49,7 @@ const Register = () => {
 
     manuallySignUp(userInfo?.email, userInfo?.confirmPassword, userInfo?.name);
     setUserError("");
-    // history.push("/");
+    history.push("/");
   };
 
   return (
