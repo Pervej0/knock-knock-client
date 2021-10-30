@@ -11,7 +11,7 @@ const MyOrder = () => {
   const [loadData, setLoadData] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${user?.email}`)
+    fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -24,7 +24,7 @@ const MyOrder = () => {
   const handleRemove = (id) => {
     let warning = window.confirm("Are sure wanna delete this product?");
     if (warning) {
-      fetch(`http://localhost:5000/myOrders/${id}`, {
+      fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
