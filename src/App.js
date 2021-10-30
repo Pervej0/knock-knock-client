@@ -39,7 +39,6 @@ function App() {
           </PrivateRoute>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          {/* <Route exact path="/" component={Home} /> */}
           <Route path="*" component={NotFound} />
         </Switch>
         <Footer />

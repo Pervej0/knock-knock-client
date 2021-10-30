@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const onSubmit = (data) => {
     fetch("https://fierce-tor-50016.herokuapp.com/products", {

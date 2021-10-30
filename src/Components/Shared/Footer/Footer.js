@@ -1,9 +1,19 @@
+import {
+  faChevronCircleUp,
+  faChevronUp,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white md:p-12 py-10 px-4 font-serif">
+      <div className="text-right relative right-10">
+        <a href="#" className="bg-yellow-500 p-3 absolute">
+          <FontAwesomeIcon icon={faChevronUp} size="1x" />
+        </a>
+      </div>
       <div className="grid gap-10 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 justify-bpetween md:px-4 md:gap-6 items-baseline pb-10">
         <div>
           <div className="mb-3 border-b pb-2 border-white font-serif">
