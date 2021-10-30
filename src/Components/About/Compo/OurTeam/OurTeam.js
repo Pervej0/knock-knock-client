@@ -7,7 +7,7 @@ const OurTeam = () => {
   const [teamMember, setTeamMember] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/team")
+    fetch("https://fierce-tor-50016.herokuapp.com/team")
       .then((res) => res.json())
       .then((data) => setTeamMember(data));
   }, []);
