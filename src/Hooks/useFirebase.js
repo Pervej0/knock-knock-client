@@ -39,7 +39,6 @@ const useFirebase = () => {
   };
 
   // manually new user creating
-
   const manuallySignUp = (email, password, name) => {
     console.log(email, password, name);
     setIsloading(true);

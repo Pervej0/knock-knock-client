@@ -31,10 +31,6 @@ const ManageOrders = () => {
             setIsApproved(true);
           }
           console.log(result);
-          /*  if (result.acknowledged) {
-          const remainOrders = orders.filter((item) => item._id !== id);
-          setOrders(remainOrders);
-        } */
         });
     } else {
       alert("Already approved");
@@ -62,7 +58,7 @@ const ManageOrders = () => {
   };
 
   return (
-    <section>
+    <section className="md:px-14 p-3 my-14">
       <div className="my-8 text-center">
         <h3 className="text-3xl mb-8 font-bold inline-block border-b-2 border-gray-800">
           All Orders
@@ -78,32 +74,34 @@ const ManageOrders = () => {
           />
         ))}
       </div>
-      <div className="container mx-auto p-6 font-mono order-table">
-        <div className="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
-          <div className="w-full">
-            <table className="w-full">
-              <thead>
-                <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
-                  <th className="px-4 py-3">S/N</th>
-                  <th className="px-4 py-3">Name</th>
-                  <th className="px-4 py-3">Product title</th>
-                  <th className="px-4 py-3">email</th>
-                  <th className="px-4 py-3">status</th>
-                  <th className="px-4 py-3">action</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white">
-                {orders.map((item, index) => (
-                  <ManageOrder
-                    key={item._id}
-                    order={item}
-                    handleRemove={handleRemove}
-                    serial={index + 1}
-                    statusHandle={statusHandle}
-                  />
-                ))}
-              </tbody>
-            </table>
+      <div class="flex flex-col order-table">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table className="w-full">
+                <thead>
+                  <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+                    <th className="px-4 py-3">S/N</th>
+                    <th className="px-4 py-3">Name</th>
+                    <th className="px-4 py-3">Product title</th>
+                    <th className="px-4 py-3">email</th>
+                    <th className="px-4 py-3">status</th>
+                    <th className="px-4 py-3">action</th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white">
+                  {orders.map((item, index) => (
+                    <ManageOrder
+                      key={item._id}
+                      order={item}
+                      handleRemove={handleRemove}
+                      serial={index + 1}
+                      statusHandle={statusHandle}
+                    />
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

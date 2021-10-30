@@ -56,7 +56,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="border-t border-dashed pt-2 text-left">
+      <div className="border-t border-dashed pt-2 text-center">
         <small>
           2019 &copy; corportaionLtd All Right reserved ; Design by{" "}
           <span className="text-yellow-300 cursor-pointer">Pervej</span>

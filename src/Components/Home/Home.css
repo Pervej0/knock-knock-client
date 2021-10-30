@@ -18,6 +18,10 @@
   width: 100%;
 }
 
+.banner-section {
+  min-height: 100vh;
+}
+
 .category-box {
   transition: 0.4s all ease;
   border: 1px solid rgba(0, 0, 0, 0.54);
@@ -27,4 +31,24 @@
   box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.54);
   -webkit-box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: 3px 4px 4px 1px rgba(0, 0, 0, 0.54);
+}
+
+.services-section .product .product-img {
+  position: relative;
+}
+
+.services-section .product .product-img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(243, 228, 24, 0.521);
+  height: 0;
+  width: 100%;
+  transition: 0.4s all ease;
+}
+
+.services-section .product .product-img:hover::after {
+  height: 100%;
+  right: 100%;
 }

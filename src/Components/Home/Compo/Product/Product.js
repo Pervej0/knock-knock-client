@@ -2,17 +2,16 @@ import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
-import useAuth from "../../../../Hooks/useAuth";
 
 const Product = ({ product }) => {
   const { title, img, price, category, _id, desc } = product;
 
   return (
-    <div>
-      <div>
-        <img src={img} alt="" />
+    <div className="product">
+      <div className="product-img">
+        <img className="w-full" src={img} alt="" />
       </div>
-      <div className="p-2 py-3 border border-t-0 hover:border-yellow-500">
+      <div className="p-2 py-3 border border-t-0 hover:border-yellow-500 product-content">
         <h3 className="text-xl font-semibold hover:text-yellow-600">{title}</h3>
         <small>
           Category: <span className="text-gray-500 capitalize">{category}</span>

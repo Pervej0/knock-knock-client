@@ -1,4 +1,9 @@
-import { faFire, faGem, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCog,
+  faFire,
+  faGem,
+  faUtensils,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
@@ -24,7 +29,7 @@ const Category = () => {
         </div>
         <div className="rounded-xl p-8 category-box bg-white">
           <button className="p-4 bg-yellow-500 text-white rounded-full">
-            <FontAwesomeIcon icon={faGem} size="2x" />
+            <FontAwesomeIcon icon={faCog} size="2x" />
           </button>
           <span className="block text-lg font-bold text-gray-700 mb-3 mt-2">
             Accessories

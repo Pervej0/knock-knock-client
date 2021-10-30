@@ -16,7 +16,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="md:px-14 p-3 my-14">
+    <section className="md:px-14 p-3 my-14 services-section">
       <div className="title text-center mb-12">
         <small className="text-yellow-600 font-bold">Quick Pick</small>
         <h1 className="text-4xl mb-4 font-bold text-gray-800">

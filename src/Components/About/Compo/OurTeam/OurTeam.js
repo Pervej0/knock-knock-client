@@ -17,7 +17,7 @@ const OurTeam = () => {
       <div className="text-center my-14">
         <h1 className="text-4xl font-semibold">Our Team</h1>
       </div>
-      <div className="grid md:grid-cols-2 gap-10 lg:gap-14 grid-cols-1">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-10 lg:gap-14 grid-cols-1">
         {teamMember.map((item) => (
           <Team key={item._id} team={item} />
         ))}

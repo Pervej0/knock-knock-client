@@ -39,7 +39,7 @@ const OrderPlace = () => {
     }
   };
   return (
-    <section className="bg-gray-800">
+    <section className="bg-gray-800 border-b py-10">
       <div className="md:px-14 p-3">
         <div className="border w-1/2 mx-auto my-10 p-8">
           <h1 className="text-4xl uppercase inline-block border-b-2 mb-8 border-fuchsia-600 text-white font-bold">
