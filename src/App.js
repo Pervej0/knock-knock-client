@@ -34,7 +34,9 @@ function App() {
           <PrivateRoute path="/manageOrders">
             <ManageOrders />
           </PrivateRoute>
-          <Route path="/addProduct" component={AddProduct} />
+          <PrivateRoute path="/addProduct">
+            <AddProduct />
+          </PrivateRoute>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           {/* <Route exact path="/" component={Home} /> */}

@@ -1,0 +1,27 @@
+.about-banner {
+  height: 50vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url("../../Images/about-banner.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.our-team .team .team-img {
+  overflow: hidden;
+}
+
+.our-team .team .team-img img {
+  height: 200px;
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 100px;
+  object-fit: cover;
+  transition: 0.5s all ease;
+}
+
+.our-team .team .team-img:hover img {
+  transform: scale(1.1);
+  border-radius: 0px;
+}

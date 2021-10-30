@@ -103,7 +103,7 @@ const AddProduct = () => {
             </div>
           </div>
           <input
-            className="px-5 py-2 bg-blue-700 text-white font-semibold"
+            className="px-5 py-2 bg-gray-800 text-white font-semibold rounded"
             type="submit"
           />
         </form>

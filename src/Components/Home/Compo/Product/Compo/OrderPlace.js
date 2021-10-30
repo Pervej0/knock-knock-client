@@ -3,12 +3,11 @@ import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import useAuth from "../../../../../Hooks/useAuth";
 
-const OrderPlace = ({ title }) => {
+const OrderPlace = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const { user } = useAuth();
   const { register, handleSubmit } = useForm();
   const { id } = useParams();
-
   const [product, setProduct] = useState({});
 
   useEffect(() => {
