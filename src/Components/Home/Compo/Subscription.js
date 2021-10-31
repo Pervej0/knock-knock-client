@@ -27,7 +27,7 @@ const Subscription = () => {
             </div>
           </div>
           <div className="md:text-right text-left">
-            <label className="bg-white flex md:w-2/3 w-full md:ml-auto mx-auto">
+            <label className="bg-white flex md:w-5/6 w-full w-full md:ml-auto mx-auto">
               <input
                 className="pl-3 w-full py-3 focus:outline-none"
                 type="email"

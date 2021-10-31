@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <section className="bg-gray-800 banner-section">
-      <div className="grid items-center gap-10 grid-cols-1 md:grid-cols-2 md:px-14 p-3 py-12">
-        <div>
+      <div className="grid items-center gap-10 lg:grid-cols-2 grid-cols-1 md:px-14 p-3 py-12">
+        <div className="mt-16 lg:mt-0">
           <h1 className="text-3xl md:text-5xl leading-10 font-bold text-white">
             Knock <span className="text-yellow-400">Knock</span> Delivery Center
           </h1>

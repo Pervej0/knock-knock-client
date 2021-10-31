@@ -10,7 +10,7 @@ import React from "react";
 const Category = () => {
   return (
     <section className="md:px-14 p-3 -mt-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
         <div className="rounded-xl p-8 category-box bg-white">
           <button className="p-4 bg-yellow-500 text-white rounded-full">
             <FontAwesomeIcon icon={faGem} size="2x" />

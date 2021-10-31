@@ -14,7 +14,7 @@ const Features = () => {
       <div className="grid md:grid-cols-2 grd-cols-1 gap-0">
         <div>
           <img
-            className="w-full"
+            className="w-full h-full"
             src="https://i.ibb.co/N6S1L3v/sit-photo.jpg"
             alt=""
           />
