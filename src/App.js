@@ -1,4 +1,7 @@
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";

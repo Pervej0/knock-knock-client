@@ -11,7 +11,10 @@ const Category = () => {
   return (
     <section className="md:px-14 p-3 -mt-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-        <div className="rounded-xl p-8 category-box bg-white">
+        <div
+          className="rounded-xl p-8 category-box bg-white"
+          data-aos="flip-left"
+        >
           <button className="p-4 bg-yellow-500 text-white rounded-full">
             <FontAwesomeIcon icon={faGem} size="2x" />
           </button>
@@ -19,7 +22,10 @@ const Category = () => {
             Jewellery
           </span>
         </div>
-        <div className="rounded-xl p-8 category-box bg-yellow-500">
+        <div
+          className="rounded-xl p-8 category-box bg-yellow-500"
+          data-aos="flip-up"
+        >
           <button className="p-4 bg-white text-gray-800 rounded-full">
             <FontAwesomeIcon icon={faFire} size="2x" />
           </button>
@@ -27,7 +33,10 @@ const Category = () => {
             Fashion
           </span>
         </div>
-        <div className="rounded-xl p-8 category-box bg-white">
+        <div
+          className="rounded-xl p-8 category-box bg-white"
+          data-aos="flip-down"
+        >
           <button className="p-4 bg-yellow-500 text-white rounded-full">
             <FontAwesomeIcon icon={faCog} size="2x" />
           </button>
@@ -35,7 +44,10 @@ const Category = () => {
             Accessories
           </span>
         </div>
-        <div className="rounded-xl p-8 category-box bg-yellow-500">
+        <div
+          className="rounded-xl p-8 category-box bg-yellow-500"
+          data-aos="flip-right"
+        >
           <button className="p-4 bg-white text-gray-800 rounded-full">
             <FontAwesomeIcon icon={faUtensils} size="2x" />
           </button>

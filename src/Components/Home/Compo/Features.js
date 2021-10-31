@@ -12,14 +12,17 @@ const Features = () => {
   return (
     <section className="features-section my-24">
       <div className="grid md:grid-cols-2 grd-cols-1 gap-0">
-        <div>
+        <div data-aos="flip-left">
           <img
             className="w-full h-full"
             src="https://i.ibb.co/N6S1L3v/sit-photo.jpg"
             alt=""
           />
         </div>
-        <div className="bg-gray-800 text-left flex items-center font-bold py-14 features-content">
+        <div
+          data-aos="flip-right"
+          className="bg-gray-800 text-left flex items-center font-bold py-14 features-content"
+        >
           <div className="md:px-10 p-3">
             <h1 className="text-3xl md:text-5xl text-white mb-10">
               Sit at Home

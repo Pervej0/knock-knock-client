@@ -8,7 +8,7 @@ import React from "react";
 
 const Subscription = () => {
   return (
-    <section className="bg-yellow-500 my-12">
+    <section className="bg-yellow-500 my-12" data-aos="fade-right">
       <div className="md:px-14 p-3 py-12">
         <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-10">
           <div className="flex gap-8 items-center">
