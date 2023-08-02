@@ -11,7 +11,7 @@ const OrderPlace = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    fetch(`https://fierce-tor-50016.herokuapp.com/products/${id}`)
+    fetch(`https://knock-knock-r0hm.onrender.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
@@ -22,7 +22,7 @@ const OrderPlace = () => {
     data.img = product.img;
 
     if (!isSubmitted) {
-      fetch(`https://fierce-tor-50016.herokuapp.com/orders`, {
+      fetch(`https://knock-knock-r0hm.onrender.com/orders`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),

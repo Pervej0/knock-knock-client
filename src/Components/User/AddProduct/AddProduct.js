@@ -5,7 +5,7 @@ const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    fetch("https://fierce-tor-50016.herokuapp.com/products", {
+    fetch("https://knock-knock-r0hm.onrender.com/products", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

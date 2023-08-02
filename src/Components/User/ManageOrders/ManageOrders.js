@@ -10,7 +10,7 @@ const ManageOrders = () => {
   const [isApproved, setIsApproved] = useState(false);
 
   useEffect(() => {
-    fetch(`https://fierce-tor-50016.herokuapp.com/myOrders`)
+    fetch(`https://knock-knock-r0hm.onrender.com/myOrders`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -21,13 +21,13 @@ const ManageOrders = () => {
   // handle status update click
   const statusHandle = (id) => {
     if (!isApproved) {
-      fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${id}`, {
+      fetch(`https://knock-knock-r0hm.onrender.com/myOrders/${id}`, {
         method: "PUT",
       })
         .then((res) => res.json())
         .then((result) => {
           if (result.setIsApproved) {
-            const updateOrder = order.filter((item) => setOrders([item]));
+            const updateOrder = orders.filter((item) => setOrders([item]));
             setIsApproved(true);
           }
           console.log(result);
@@ -41,7 +41,7 @@ const ManageOrders = () => {
   const handleRemove = (id) => {
     let warning = window.confirm("Are sure wanna delete this product?");
     if (warning) {
-      fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${id}`, {
+      fetch(`https://knock-knock-r0hm.onrender.com/myOrders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

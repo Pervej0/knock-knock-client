@@ -11,7 +11,7 @@ const MyOrder = () => {
   const [loadData, setLoadData] = useState(true);
 
   useEffect(() => {
-    fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${user?.email}`)
+    fetch(`https://knock-knock-r0hm.onrender.com/myOrders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setOrders(data);
@@ -24,7 +24,7 @@ const MyOrder = () => {
   const handleRemove = (id) => {
     let warning = window.confirm("Are sure wanna delete this product?");
     if (warning) {
-      fetch(`https://fierce-tor-50016.herokuapp.com/myOrders/${id}`, {
+      fetch(`https://knock-knock-r0hm.onrender.com/myOrders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

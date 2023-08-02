@@ -7,7 +7,7 @@ const OurTeam = () => {
   const [teamMember, setTeamMember] = useState([]);
 
   useEffect(() => {
-    fetch("https://fierce-tor-50016.herokuapp.com/team")
+    fetch("https://knock-knock-r0hm.onrender.com/team")
       .then((res) => res.json())
       .then((data) => setTeamMember(data));
   }, []);

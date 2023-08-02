@@ -7,7 +7,7 @@ const Services = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://fierce-tor-50016.herokuapp.com/products")
+    fetch("https://knock-knock-r0hm.onrender.com/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -23,6 +23,7 @@ const Services = () => {
           Popular Choices
         </h1>
       </div>
+
       {isLoading ? (
         <Spinner />
       ) : (

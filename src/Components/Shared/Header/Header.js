@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import "./HeaderQuery";
+// import "./HeaderQuery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,

@@ -1,7 +1,7 @@
 import "./App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-AOS.init();
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -17,7 +17,7 @@ import MyOrder from "./Components/User/MyOrder/MyOrder";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import ManageOrders from "./Components/User/ManageOrders/ManageOrders";
 import AddProduct from "./Components/User/AddProduct/AddProduct";
-
+AOS.init();
 function App() {
   return (
     <AuthProvider>
